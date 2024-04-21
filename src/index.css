@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(21, 52, 72);
+  color: rgb(255, 255, 255);
+}
+.cart {
+  padding: 4px;
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  color: #000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  cursor: pointer;
+}
+.cart i {
+  font-size: 24px;
+}
+.cartAmount {
+  position: absolute;
+  display: flex;
+  place-content: center;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  color: rgb(255, 255, 255);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+/* SHOP CARD GROUP */
+.shop {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+@media only screen and (max-width: 991px) {
+  .shop {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
