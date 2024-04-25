@@ -85,29 +85,43 @@ let shopItemsData = [
     img: "img/img-12.png",
   },
 ];
-
+let basket = [];
 let generateItems = () => {
   return (shop.innerHTML = shopItemsData
     .map(({ id, name, price, desc, img }) => {
       return `
-        <div class="item">
-            <img width="200" src="${img}" alt="${img}" />
-                <div class="dt">
-                    <h3>${name}</h3>
-                    <p>
-                        ${desc}
-                    </p>
-                    <div class="price-qnt">
-                        <h2>$${price}</h2>
-                        <div class="buttons">
-                        <i class="bi bi-dash"></i>
-                        <span class="qnt">0</span>
-                        <i class="bi bi-plus-lg"></i>
-                        </div>
+        <div id="${id}" class="item">
+          <img width="200" src="${img}" alt="${img}" />
+              <div class="dt">
+                <h3>${name}</h3>
+                <p>
+                  ${desc}
+                </p>
+                <div class="price-qnt">
+                  <h2>$${price}</h2>
+                    <div class="buttons">
+                        <i onclick="decrement(${id})" class="bi bi-dash"></i>
+                        <span id="${id}}" class="qnt">0</span>
+                        <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
                     </div>
+                </div>
             </div>
         </div>`;
     })
     .join(""));
 };
 generateItems();
+let increment = (id) => {
+  let selectedItem = id;
+  let search = basket.find();
+  basket.push({
+    id: selectedItem.id,
+    item: 1,
+  });
+  console.log(basket);
+};
+let decrement = (id) => {
+  let selectedItem = id;
+  console.log(selectedItem.id);
+};
+let update = () => {};
