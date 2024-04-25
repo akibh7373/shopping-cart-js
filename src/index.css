@@ -28,8 +28,39 @@ body {
   -o-border-radius: 4px;
   cursor: pointer;
 }
+.price-qnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .cart i {
   font-size: 24px;
+}
+/* SHOP CARD GROUP */
+.shop {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.item {
+  border: 2px solid #1b1b1b;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.item img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+}
+.dt {
+  padding: 24px;
+}
+.dt p {
+  margin: 16px 0 8px;
 }
 .cartAmount {
   position: absolute;
@@ -46,13 +77,6 @@ body {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-}
-/* SHOP CARD GROUP */
-.shop {
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
 }
 @media only screen and (max-width: 991px) {
   .shop {
